@@ -22,6 +22,7 @@
 		84B931EF1785F588009500B8 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B931EE1785F588009500B8 /* icon@2x.png */; };
 		84B931F21785F800009500B8 /* GameStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B931F11785F800009500B8 /* GameStateManager.m */; };
 		84B931F61785F892009500B8 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B931F51785F892009500B8 /* GameState.m */; };
+		84B931F91785FC32009500B8 /* MainGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B931F81785FC32009500B8 /* MainGameState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		84B931F11785F800009500B8 /* GameStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStateManager.m; sourceTree = "<group>"; };
 		84B931F41785F892009500B8 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
 		84B931F51785F892009500B8 /* GameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
+		84B931F71785FC32009500B8 /* MainGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainGameState.h; sourceTree = "<group>"; };
+		84B931F81785FC32009500B8 /* MainGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainGameState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 				84B931F11785F800009500B8 /* GameStateManager.m */,
 				84B931F41785F892009500B8 /* GameState.h */,
 				84B931F51785F892009500B8 /* GameState.m */,
+				84B931F71785FC32009500B8 /* MainGameState.h */,
+				84B931F81785FC32009500B8 /* MainGameState.m */,
 				84B931DA1785F494009500B8 /* ViewController.m */,
 			);
 			name = Classes;
@@ -212,6 +217,7 @@
 				84B931DB1785F494009500B8 /* ViewController.m in Sources */,
 				84B931F21785F800009500B8 /* GameStateManager.m in Sources */,
 				84B931F61785F892009500B8 /* GameState.m in Sources */,
+				84B931F91785FC32009500B8 /* MainGameState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
