@@ -20,6 +20,8 @@
 		84B931EB1785F555009500B8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B931E81785F555009500B8 /* Default@2x.png */; };
 		84B931ED1785F581009500B8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B931EC1785F581009500B8 /* icon.png */; };
 		84B931EF1785F588009500B8 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B931EE1785F588009500B8 /* icon@2x.png */; };
+		84B931F21785F800009500B8 /* GameStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B931F11785F800009500B8 /* GameStateManager.m */; };
+		84B931F61785F892009500B8 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B931F51785F892009500B8 /* GameState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		84B931E81785F555009500B8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		84B931EC1785F581009500B8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		84B931EE1785F588009500B8 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		84B931F01785F800009500B8 /* GameStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateManager.h; sourceTree = "<group>"; };
+		84B931F11785F800009500B8 /* GameStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStateManager.m; sourceTree = "<group>"; };
+		84B931F41785F892009500B8 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
+		84B931F51785F892009500B8 /* GameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +98,7 @@
 				84B931CD1785F494009500B8 /* AppDelegate.h */,
 				84B931CE1785F494009500B8 /* AppDelegate.m */,
 				84B931E11785F4BC009500B8 /* Views */,
-				84B931D91785F494009500B8 /* ViewController.h */,
-				84B931DA1785F494009500B8 /* ViewController.m */,
+				84B931F31785F80D009500B8 /* Classes */,
 				84B931C51785F494009500B8 /* Supporting Files */,
 			);
 			path = MyFramework;
@@ -119,6 +124,19 @@
 				84B931D61785F494009500B8 /* MainStoryboard.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		84B931F31785F80D009500B8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				84B931D91785F494009500B8 /* ViewController.h */,
+				84B931F01785F800009500B8 /* GameStateManager.h */,
+				84B931F11785F800009500B8 /* GameStateManager.m */,
+				84B931F41785F892009500B8 /* GameState.h */,
+				84B931F51785F892009500B8 /* GameState.m */,
+				84B931DA1785F494009500B8 /* ViewController.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +210,8 @@
 				84B931CB1785F494009500B8 /* main.m in Sources */,
 				84B931CF1785F494009500B8 /* AppDelegate.m in Sources */,
 				84B931DB1785F494009500B8 /* ViewController.m in Sources */,
+				84B931F21785F800009500B8 /* GameStateManager.m in Sources */,
+				84B931F61785F892009500B8 /* GameState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
