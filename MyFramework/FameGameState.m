@@ -1,15 +1,16 @@
 //
-//  MainGameState.m
+//  FameGameState.m
 //  MyFramework
 //
-//  Created by Angel Villanueva Pérez on 04/07/13.
+//  Created by Angel Villanueva Pérez on 05/07/13.
 //  Copyright (c) 2013 Angel Villanueva Pérez. All rights reserved.
 //
 
-#import "GameGameState.h"
+#import "FameGameState.h"
 #import "MainMenuGameState.h"
 
-@implementation GameGameState
+
+@implementation FameGameState
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -24,7 +25,7 @@
     
     if (self = [super initWithFrame:frame andManager:manager]) {
         
-        NSLog(@"Game Game State initialized");
+        NSLog(@"Fame Game State initialized");
         
     }
     
@@ -53,21 +54,20 @@
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ */
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef g = UIGraphicsGetCurrentContext();
     
     // fill background with gray
-    CGContextSetFillColorWithColor(g, [UIColor lightGrayColor].CGColor);
+    CGContextSetFillColorWithColor(g, [UIColor blueColor].CGColor);
     CGContextFillRect(g, CGRectMake(0, 0, self.frame.size.width, self.frame.size.height));
     // draw text in black
     CGContextSetFillColorWithColor(g, [UIColor blackColor].CGColor);
-    [@"Rendered from Game Game State" drawAtPoint:CGPointMake(10.0, 20.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+    [@"Rendered from Fame Game State" drawAtPoint:CGPointMake(10.0, 20.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
     [@"Double tap for the Main Menu" drawAtPoint:CGPointMake(10.0, 80.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
 }
-
 
 @end

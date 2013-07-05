@@ -13,5 +13,7 @@
 @property (strong, nonatomic) IBOutlet UIView *subview;
 
 - (IBAction)doGoGame:(id)sender;
+- (IBAction)doGoHelp:(id)sender;
+- (IBAction)doGoFame:(id)sender;
 
 @end

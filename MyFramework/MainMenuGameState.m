@@ -8,6 +8,9 @@
 
 #import "MainMenuGameState.h"
 #import "GameGameState.h"
+#import "HelpGameState.h"
+#import "FameGameState.h"
+
 
 @implementation MainMenuGameState
 
@@ -40,6 +43,18 @@
 - (IBAction)doGoGame:(id)sender {
     
     [gameManager doStateChange:[GameGameState class]];
+    
+}
+
+- (IBAction)doGoHelp:(id)sender {
+    
+    [gameManager doStateChange:[HelpGameState class]];
+    
+}
+
+- (IBAction)doGoFame:(id)sender {
+    
+    [gameManager doStateChange:[FameGameState class]];
     
 }
 

@@ -25,6 +25,8 @@
 		84B931F91785FC32009500B8 /* GameGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B931F81785FC32009500B8 /* GameGameState.m */; };
 		84B931FE1786FEB6009500B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B931FD1786FEB6009500B8 /* MainMenu.xib */; };
 		84B932011786FF38009500B8 /* MainMenuGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B932001786FF38009500B8 /* MainMenuGameState.m */; };
+		84B93204178705BF009500B8 /* HelpGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B93203178705BE009500B8 /* HelpGameState.m */; };
+		84B93207178706A4009500B8 /* FameGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B93206178706A4009500B8 /* FameGameState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,10 @@
 		84B931FD1786FEB6009500B8 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../MainMenu.xib; sourceTree = "<group>"; };
 		84B931FF1786FF37009500B8 /* MainMenuGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuGameState.h; sourceTree = "<group>"; };
 		84B932001786FF38009500B8 /* MainMenuGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuGameState.m; sourceTree = "<group>"; };
+		84B93202178705BE009500B8 /* HelpGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpGameState.h; sourceTree = "<group>"; };
+		84B93203178705BE009500B8 /* HelpGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpGameState.m; sourceTree = "<group>"; };
+		84B93205178706A4009500B8 /* FameGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FameGameState.h; sourceTree = "<group>"; };
+		84B93206178706A4009500B8 /* FameGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FameGameState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,10 @@
 				84B932001786FF38009500B8 /* MainMenuGameState.m */,
 				84B931F71785FC32009500B8 /* GameGameState.h */,
 				84B931F81785FC32009500B8 /* GameGameState.m */,
+				84B93205178706A4009500B8 /* FameGameState.h */,
+				84B93206178706A4009500B8 /* FameGameState.m */,
+				84B93202178705BE009500B8 /* HelpGameState.h */,
+				84B93203178705BE009500B8 /* HelpGameState.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -228,6 +238,8 @@
 				84B931F61785F892009500B8 /* GameState.m in Sources */,
 				84B931F91785FC32009500B8 /* GameGameState.m in Sources */,
 				84B932011786FF38009500B8 /* MainMenuGameState.m in Sources */,
+				84B93204178705BF009500B8 /* HelpGameState.m in Sources */,
+				84B93207178706A4009500B8 /* FameGameState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
