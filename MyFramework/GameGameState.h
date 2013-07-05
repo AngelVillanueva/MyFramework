@@ -8,6 +8,6 @@
 
 #import "GameState.h"
 
-@interface MainGameState : GameState
+@interface GameGameState : GameState
 
 @end

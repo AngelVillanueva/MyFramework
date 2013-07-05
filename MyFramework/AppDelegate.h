@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #include "GameStateManager.h"
-#include "MainGameState.h"
+#include "MainMenuGameState.h"
 
 @interface AppDelegate : GameStateManager <UIApplicationDelegate>
 

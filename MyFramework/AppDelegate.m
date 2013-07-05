@@ -24,7 +24,7 @@
     [NSTimer scheduledTimerWithTimeInterval:0.033 target:self selector:@selector(gameLoop:) userInfo:nil repeats:NO];
     
     // create instance of the first Game State (main)
-    [self doStateChange:[MainGameState class]];
+    [self doStateChange:[MainMenuGameState class]];
     
     return YES;
 }

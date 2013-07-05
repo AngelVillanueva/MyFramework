@@ -6,9 +6,10 @@
 //  Copyright (c) 2013 Angel Villanueva Pérez. All rights reserved.
 //
 
-#import "MainGameState.h"
+#import "GameGameState.h"
+#import "MainMenuGameState.h"
 
-@implementation MainGameState
+@implementation GameGameState
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -23,7 +24,7 @@
     
     if (self = [super initWithFrame:frame andManager:manager]) {
         
-        NSLog(@"Main Game State initialized");
+        NSLog(@"Game Game State initialized");
         
     }
     
@@ -43,6 +44,11 @@
     NSUInteger numTaps = [touch tapCount];
     
     // todo: implement touch code
+    if (numTaps > 1) {
+        
+        [gameManager doStateChange:[MainMenuGameState class]];
+        
+    }
     
 }
 
@@ -59,7 +65,8 @@
     CGContextFillRect(g, CGRectMake(0, 0, self.frame.size.width, self.frame.size.height));
     // draw text in black
     CGContextSetFillColorWithColor(g, [UIColor blackColor].CGColor);
-    [@"Rendered from Main Game State" drawAtPoint:CGPointMake(10.0, 20.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+    [@"Rendered from Game Game State" drawAtPoint:CGPointMake(10.0, 20.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+    [@"Double tap for the Main Menu" drawAtPoint:CGPointMake(10.0, 80.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
 }
 
 

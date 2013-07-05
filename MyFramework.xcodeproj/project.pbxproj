@@ -22,7 +22,9 @@
 		84B931EF1785F588009500B8 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B931EE1785F588009500B8 /* icon@2x.png */; };
 		84B931F21785F800009500B8 /* GameStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B931F11785F800009500B8 /* GameStateManager.m */; };
 		84B931F61785F892009500B8 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B931F51785F892009500B8 /* GameState.m */; };
-		84B931F91785FC32009500B8 /* MainGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B931F81785FC32009500B8 /* MainGameState.m */; };
+		84B931F91785FC32009500B8 /* GameGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B931F81785FC32009500B8 /* GameGameState.m */; };
+		84B931FE1786FEB6009500B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B931FD1786FEB6009500B8 /* MainMenu.xib */; };
+		84B932011786FF38009500B8 /* MainMenuGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B932001786FF38009500B8 /* MainMenuGameState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +50,11 @@
 		84B931F11785F800009500B8 /* GameStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStateManager.m; sourceTree = "<group>"; };
 		84B931F41785F892009500B8 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
 		84B931F51785F892009500B8 /* GameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
-		84B931F71785FC32009500B8 /* MainGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainGameState.h; sourceTree = "<group>"; };
-		84B931F81785FC32009500B8 /* MainGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainGameState.m; sourceTree = "<group>"; };
+		84B931F71785FC32009500B8 /* GameGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameGameState.h; sourceTree = "<group>"; };
+		84B931F81785FC32009500B8 /* GameGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameGameState.m; sourceTree = "<group>"; };
+		84B931FD1786FEB6009500B8 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../MainMenu.xib; sourceTree = "<group>"; };
+		84B931FF1786FF37009500B8 /* MainMenuGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuGameState.h; sourceTree = "<group>"; };
+		84B932001786FF38009500B8 /* MainMenuGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuGameState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +129,7 @@
 		84B931E11785F4BC009500B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84B931FD1786FEB6009500B8 /* MainMenu.xib */,
 				84B931D61785F494009500B8 /* MainStoryboard.storyboard */,
 			);
 			name = Views;
@@ -133,13 +139,15 @@
 			isa = PBXGroup;
 			children = (
 				84B931D91785F494009500B8 /* ViewController.h */,
+				84B931DA1785F494009500B8 /* ViewController.m */,
 				84B931F01785F800009500B8 /* GameStateManager.h */,
 				84B931F11785F800009500B8 /* GameStateManager.m */,
 				84B931F41785F892009500B8 /* GameState.h */,
 				84B931F51785F892009500B8 /* GameState.m */,
-				84B931F71785FC32009500B8 /* MainGameState.h */,
-				84B931F81785FC32009500B8 /* MainGameState.m */,
-				84B931DA1785F494009500B8 /* ViewController.m */,
+				84B931FF1786FF37009500B8 /* MainMenuGameState.h */,
+				84B932001786FF38009500B8 /* MainMenuGameState.m */,
+				84B931F71785FC32009500B8 /* GameGameState.h */,
+				84B931F81785FC32009500B8 /* GameGameState.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 				84B931EB1785F555009500B8 /* Default@2x.png in Resources */,
 				84B931ED1785F581009500B8 /* icon.png in Resources */,
 				84B931EF1785F588009500B8 /* icon@2x.png in Resources */,
+				84B931FE1786FEB6009500B8 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +226,8 @@
 				84B931DB1785F494009500B8 /* ViewController.m in Sources */,
 				84B931F21785F800009500B8 /* GameStateManager.m in Sources */,
 				84B931F61785F892009500B8 /* GameState.m in Sources */,
-				84B931F91785FC32009500B8 /* MainGameState.m in Sources */,
+				84B931F91785FC32009500B8 /* GameGameState.m in Sources */,
+				84B932011786FF38009500B8 /* MainMenuGameState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +350,7 @@
 				84B931E01785F494009500B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
