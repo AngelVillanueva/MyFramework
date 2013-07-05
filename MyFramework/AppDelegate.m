@@ -10,10 +10,54 @@
 
 @implementation AppDelegate
 
+@synthesize window;
+@synthesize viewController;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // set viewController from root ViewController
+    viewController  = window.rootViewController;
+    
+    // set up main loop
+    [NSTimer scheduledTimerWithTimeInterval:0.033 target:self selector:@selector(gameLoop:) userInfo:nil repeats:NO];
+    
+    // create instance of the first Game State (main)
+    [self doStateChange:[MainGameState class]];
+    
     return YES;
+}
+
+- (void) gameLoop:(id) sender {
+    
+    // Update and Render the actual view
+    [(GameState *)viewController.view update];
+    [(GameState *)viewController.view render];
+    
+    // And loop again
+    [NSTimer scheduledTimerWithTimeInterval:0.033 target:self selector:@selector(gameLoop:) userInfo:nil repeats:NO];
+    
+    
+}
+
+- (void) doStateChange:(Class)state {
+    
+    if (viewController.view != nil) {
+        
+        // remove view from window's subviews.
+        [viewController.view removeFromSuperview];
+        // release game state is not longer needed with ARC, before was also [_viewController.view release]
+        
+    }
+    
+    // creates the new game state (remember: a view)
+    viewController.view = [[state alloc] initWithFrame:CGRectMake(0, 0, IPHONE_WIDTH, IPHONE_HEIGHT) andManager:self];
+    
+    // now set our view as visible
+    [window addSubview:viewController.view];
+    [window makeKeyAndVisible];
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

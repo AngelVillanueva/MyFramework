@@ -12,3 +12,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define IPHONE_WIDTH 320
+#define IPHONE_HEIGHT 480
+

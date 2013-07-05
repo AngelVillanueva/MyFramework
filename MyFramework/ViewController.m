@@ -14,6 +14,10 @@
 
 @implementation ViewController
 
+- (void)loadView {
+    // just called to avoid the automatic creation of an auto view
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

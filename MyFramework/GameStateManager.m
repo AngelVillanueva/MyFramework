@@ -10,4 +10,8 @@
 
 @implementation GameStateManager
 
+- (void) doStateChange:(Class)state {
+    
+}
+
 @end

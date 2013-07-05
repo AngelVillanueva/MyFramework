@@ -31,6 +31,12 @@
     
 }
 
+- (void) render {
+    
+    [self setNeedsDisplay];
+    
+}
+
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [touches anyObject];
