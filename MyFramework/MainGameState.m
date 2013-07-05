@@ -19,9 +19,9 @@
     return self;
 }
 
-- (id) initWithFrame:(CGRect)frame andManager:(GameStateManager *)pManager {
+- (id) initWithFrame:(CGRect)frame andManager:(GameStateManager *)manager {
     
-    if (self = [super initWithFrame:frame andManager:pManager]) {
+    if (self = [super initWithFrame:frame andManager:manager]) {
         
         NSLog(@"Main Game State initialized");
         

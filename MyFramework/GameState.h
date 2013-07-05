@@ -10,10 +10,10 @@
 #import "GameStateManager.h"
 
 @interface GameState : UIView {
-    GameStateManager *m_pManager;
+    GameStateManager *gameManager;
 }
 
-- (id) initWithFrame:(CGRect)frame andManager:(GameStateManager *)pManager;
+- (id) initWithFrame:(CGRect)frame andManager:(GameStateManager *)manager;
 - (void) update;
 - (void) render;
 

@@ -19,11 +19,11 @@
     return self;
 }
 
-- (id)initWithFrame:(CGRect)frame andManager:(id)pManager {
+- (id)initWithFrame:(CGRect)frame andManager:(id)manager {
     
     if (self = [super initWithFrame:frame]) {
         // Initialization code
-        m_pManager = pManager;
+        gameManager = manager;
         self.userInteractionEnabled = true;
     }
     
