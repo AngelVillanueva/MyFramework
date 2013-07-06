@@ -21,4 +21,6 @@
 
 @property NSString *status;
 
+- (void)animationDone:(NSTimer *)inTimer;
+
 @end

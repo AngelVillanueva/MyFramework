@@ -139,21 +139,25 @@
         
         self.Is_new_animation = NO;
         [self.animation_to_play.movie startAnimating];
-        NSLog(@"Acabo de mostrar la movie");
-        
-//        [imageView setAnimationDuration:1.0];
-//        [x startAnimating];
-//        x.image = [imgArray lastObject];
-//        [self.view addSubview:x];
-//        [x release];
-        
-        UIImage *stopImage = [UIImage imageNamed:@"win_1.png"];
-        UIImageView *stopImageView = [ [UIImageView alloc] initWithImage:stopImage];
-        stopImageView.frame = CGRectMake(60, 95, 86, 193);
-        [self addSubview:stopImageView];
+        // callback to show a fix image at the end
+        [NSTimer scheduledTimerWithTimeInterval:0.5 target:self
+                                       selector:@selector(animationDone:)
+                                       userInfo:nil repeats:NO];
         
     }
     
+}
+
+// callback on animationDone to swap last movie frame for a fix image
+-(void)animationDone:(NSTimer*)inTimer
+{
+    [inTimer invalidate];
+    inTimer = nil;
+    NSLog(@"animationDone ");
+    UIImage *stopImage = [UIImage imageNamed:@"win_1.png"];
+    UIImageView *stopImageView = [ [UIImageView alloc] initWithImage:stopImage];
+    stopImageView.frame = CGRectMake(60, 95, 86, 193);
+    [self addSubview:stopImageView];
 }
 
 

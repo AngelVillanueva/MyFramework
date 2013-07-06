@@ -21,7 +21,6 @@
         
     }
     
-    
     return self;
     
 }
@@ -45,11 +44,4 @@
 }
 
 @end
-
-
-// how to implement in game state
-
-//self.animation_to_play = [[Animation alloc] initWithPath:self.current_path];
-//[self addSubview:self.animation_to_play.movie];
-//[self.animation_to_play.movie startAnimating];
 
