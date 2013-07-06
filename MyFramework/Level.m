@@ -26,6 +26,7 @@
     if (self = [super init]) {
         
         self.estado = [NSString stringWithFormat:@"I'm just created and I'm %d", level ];
+        self.maximum_level = level * 2;
         
     }
     

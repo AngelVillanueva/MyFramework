@@ -8,6 +8,8 @@
 
 #import "GameGameState.h"
 #import "MainMenuGameState.h"
+#import "WinGameGameState.h"
+
 
 @implementation GameGameState
 
@@ -24,7 +26,6 @@
     
     if (self = [super initWithFrame:frame andManager:manager]) {
         
-        NSLog(@"Game Game State initialized");
         // As it is a new game, then let's set the current level as the first one
         self.current_level = 1;
         // Flag that level has changed (so we will need to init the new one - later: update method)
@@ -40,19 +41,30 @@
     
     // If this is a new level we need to initialized it
     if (self.Is_new_level) {
-        self.level = [[Level alloc] initWithLevel:self.current_level];
+        
         self.Is_new_level = NO;
+        // If there are no more levels to load then load the WinGame state: kudos, you Won the Game! (except if this is the first level, which is always loaded)
+        if (self.current_level != 1 && self.current_level > self.level.maximum_level) {
+            
+            [gameManager doStateChange:[WinGameGameState class]];
+            
+        } else {
+            
+            self.level = [[Level alloc] initWithLevel:self.current_level];
+            
+        }
+        
     }
     
     // to do: if animation_changed
     // build animation_array
     // play animation
     
+    
     // to do: if no active_buttons
       // if no camino_misterioso then doStateChange --> game over
       // if camino_misterioso
-        // if level == max_level then doStateChane --> you win the game
-        // else doStateChange --> you win the level
+        // doStateChange --> you win the level
         // level++
        // _current_level = [_current_level doNextLevel];
     

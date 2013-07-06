@@ -28,6 +28,7 @@
 		84B93204178705BF009500B8 /* HelpGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B93203178705BE009500B8 /* HelpGameState.m */; };
 		84B93207178706A4009500B8 /* FameGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B93206178706A4009500B8 /* FameGameState.m */; };
 		84B9320C17871D32009500B8 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B9320B17871D31009500B8 /* Level.m */; };
+		84B9321017883683009500B8 /* WinGameGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B9320F17883683009500B8 /* WinGameGameState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		84B93206178706A4009500B8 /* FameGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FameGameState.m; sourceTree = "<group>"; };
 		84B9320A17871D31009500B8 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		84B9320B17871D31009500B8 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		84B9320E17883683009500B8 /* WinGameGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinGameGameState.h; sourceTree = "<group>"; };
+		84B9320F17883683009500B8 /* WinGameGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinGameGameState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				84B931F71785FC32009500B8 /* GameGameState.h */,
 				84B931F81785FC32009500B8 /* GameGameState.m */,
 				84B9320D17871D3F009500B8 /* Game Logic */,
+				84B9320E17883683009500B8 /* WinGameGameState.h */,
+				84B9320F17883683009500B8 /* WinGameGameState.m */,
 				84B93205178706A4009500B8 /* FameGameState.h */,
 				84B93206178706A4009500B8 /* FameGameState.m */,
 				84B93202178705BE009500B8 /* HelpGameState.h */,
@@ -254,6 +259,7 @@
 				84B93204178705BF009500B8 /* HelpGameState.m in Sources */,
 				84B93207178706A4009500B8 /* FameGameState.m in Sources */,
 				84B9320C17871D32009500B8 /* Level.m in Sources */,
+				84B9321017883683009500B8 /* WinGameGameState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
