@@ -46,6 +46,8 @@
 		84B9325117884ABC009500B8 /* win_14.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B9324117884ABA009500B8 /* win_14.png */; };
 		84B9325217884ABC009500B8 /* win_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B9324217884ABB009500B8 /* win_15.png */; };
 		84B9325317884ABC009500B8 /* win_16.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B9324317884ABB009500B8 /* win_16.png */; };
+		84B9325717888E6C009500B8 /* GameOverGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B9325617888E6C009500B8 /* GameOverGameState.m */; };
+		84B9325A17889001009500B8 /* WinLevelGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B9325917889001009500B8 /* WinLevelGameState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,10 @@
 		84B9324117884ABA009500B8 /* win_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_14.png; sourceTree = "<group>"; };
 		84B9324217884ABB009500B8 /* win_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_15.png; sourceTree = "<group>"; };
 		84B9324317884ABB009500B8 /* win_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_16.png; sourceTree = "<group>"; };
+		84B9325517888E6B009500B8 /* GameOverGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverGameState.h; sourceTree = "<group>"; };
+		84B9325617888E6C009500B8 /* GameOverGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverGameState.m; sourceTree = "<group>"; };
+		84B9325817889001009500B8 /* WinLevelGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WinLevelGameState.h; path = ../WinLevelGameState.h; sourceTree = "<group>"; };
+		84B9325917889001009500B8 /* WinLevelGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WinLevelGameState.m; path = ../WinLevelGameState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +203,10 @@
 				84B931F71785FC32009500B8 /* GameGameState.h */,
 				84B931F81785FC32009500B8 /* GameGameState.m */,
 				84B9320D17871D3F009500B8 /* Game Logic */,
+				84B9325517888E6B009500B8 /* GameOverGameState.h */,
+				84B9325617888E6C009500B8 /* GameOverGameState.m */,
+				84B9325817889001009500B8 /* WinLevelGameState.h */,
+				84B9325917889001009500B8 /* WinLevelGameState.m */,
 				84B9320E17883683009500B8 /* WinGameGameState.h */,
 				84B9320F17883683009500B8 /* WinGameGameState.m */,
 				84B93205178706A4009500B8 /* FameGameState.h */,
@@ -338,6 +348,8 @@
 				84B9320C17871D32009500B8 /* Level.m in Sources */,
 				84B9321017883683009500B8 /* WinGameGameState.m in Sources */,
 				84B93213178844E4009500B8 /* Animation.m in Sources */,
+				84B9325717888E6C009500B8 /* GameOverGameState.m in Sources */,
+				84B9325A17889001009500B8 /* WinLevelGameState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

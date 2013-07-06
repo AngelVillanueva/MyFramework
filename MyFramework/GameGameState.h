@@ -18,6 +18,7 @@
 @property BOOL Is_new_animation;
 @property NSMutableArray *current_path;
 @property (strong,nonatomic) Animation *animation_to_play;
+@property NSInteger active_buttons;
 
 @property NSString *status;
 

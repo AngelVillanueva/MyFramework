@@ -9,6 +9,8 @@
 #import "GameGameState.h"
 #import "MainMenuGameState.h"
 #import "WinGameGameState.h"
+#import "WinLevelGameState.h"
+#import "GameOverGameState.h"
 #import "Animation.h"
 
 
@@ -54,23 +56,33 @@
             self.level = [[Level alloc] initWithLevel:self.current_level];
             self.Is_new_animation = YES;
             self.current_path = [[NSMutableArray alloc] initWithArray:@[]];
+            self.active_buttons = [self.level.movimientos count];
             
         }
         
     }
     
-    // to do: if animation_changed
-    // build animation_array
-    // play animation
+
+    // create animation movie if needed
     if (self.Is_new_animation == YES) {
         
         self.animation_to_play = [[Animation alloc] initWithPath:self.current_path];
-        NSLog(@"New animation comes here with the following path: %@", self.animation_to_play.movie.animationImages[0]);
         
     }
     
     
     // to do: if no active_buttons
+    if (self.active_buttons == 4) {
+        NSLog(@"No se puede seguir jugando por A o por B");
+        // GAME OVER if no active buttons and no winning path
+        if (self.current_path == self.level.camino_misterioso) {
+            [gameManager doStateChange:[GameOverGameState class]];
+        } else {
+            self.current_level++;
+            NSLog(@"He subio de level hasta %d", self.current_level);
+            [gameManager doStateChange:[WinLevelGameState class]];
+        }
+    }
       // if no camino_misterioso then doStateChange --> game over
       // if camino_misterioso
         // doStateChange --> you win the level
@@ -153,7 +165,6 @@
 {
     [inTimer invalidate];
     inTimer = nil;
-    NSLog(@"animationDone ");
     UIImage *stopImage = [UIImage imageNamed:@"win_1.png"];
     UIImageView *stopImageView = [ [UIImageView alloc] initWithImage:stopImage];
     stopImageView.frame = CGRectMake(60, 95, 86, 193);

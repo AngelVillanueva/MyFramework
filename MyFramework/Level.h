@@ -13,7 +13,6 @@
 @property (strong, nonatomic) NSString *estado;
 @property (strong, nonatomic) NSArray *movimientos;
 @property (strong, nonatomic) NSArray *animaciones;
-@property (strong, nonatomic) NSArray *camino;
 @property (strong, nonatomic) NSArray *camino_misterioso;
 
 @property NSInteger maximum_level;
