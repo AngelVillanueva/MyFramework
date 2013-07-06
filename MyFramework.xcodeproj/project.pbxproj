@@ -27,6 +27,7 @@
 		84B932011786FF38009500B8 /* MainMenuGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B932001786FF38009500B8 /* MainMenuGameState.m */; };
 		84B93204178705BF009500B8 /* HelpGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B93203178705BE009500B8 /* HelpGameState.m */; };
 		84B93207178706A4009500B8 /* FameGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B93206178706A4009500B8 /* FameGameState.m */; };
+		84B9320C17871D32009500B8 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B9320B17871D31009500B8 /* Level.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		84B93203178705BE009500B8 /* HelpGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpGameState.m; sourceTree = "<group>"; };
 		84B93205178706A4009500B8 /* FameGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FameGameState.h; sourceTree = "<group>"; };
 		84B93206178706A4009500B8 /* FameGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FameGameState.m; sourceTree = "<group>"; };
+		84B9320A17871D31009500B8 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		84B9320B17871D31009500B8 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,12 +157,22 @@
 				84B932001786FF38009500B8 /* MainMenuGameState.m */,
 				84B931F71785FC32009500B8 /* GameGameState.h */,
 				84B931F81785FC32009500B8 /* GameGameState.m */,
+				84B9320D17871D3F009500B8 /* Game Logic */,
 				84B93205178706A4009500B8 /* FameGameState.h */,
 				84B93206178706A4009500B8 /* FameGameState.m */,
 				84B93202178705BE009500B8 /* HelpGameState.h */,
 				84B93203178705BE009500B8 /* HelpGameState.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		84B9320D17871D3F009500B8 /* Game Logic */ = {
+			isa = PBXGroup;
+			children = (
+				84B9320A17871D31009500B8 /* Level.h */,
+				84B9320B17871D31009500B8 /* Level.m */,
+			);
+			name = "Game Logic";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +253,7 @@
 				84B932011786FF38009500B8 /* MainMenuGameState.m in Sources */,
 				84B93204178705BF009500B8 /* HelpGameState.m in Sources */,
 				84B93207178706A4009500B8 /* FameGameState.m in Sources */,
+				84B9320C17871D32009500B8 /* Level.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

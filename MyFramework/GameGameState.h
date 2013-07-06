@@ -7,7 +7,14 @@
 //
 
 #import "GameState.h"
+#import "Level.h"
 
 @interface GameGameState : GameState
+
+@property (strong, nonatomic) Level *level;
+@property NSInteger current_level;
+@property BOOL Is_new_level;
+
+@property NSString *status;
 
 @end

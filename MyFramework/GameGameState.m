@@ -25,6 +25,10 @@
     if (self = [super initWithFrame:frame andManager:manager]) {
         
         NSLog(@"Game Game State initialized");
+        // As it is a new game, then let's create the first level
+        self.current_level = 1;
+        self.level = [[Level alloc] initWithLevel:self.current_level];
+        self.Is_new_level = NO;
         
     }
     
@@ -32,7 +36,34 @@
     
 }
 
+- (void) update {
+    
+    // to do: if level_changed then loadLevel()
+    if (self.Is_new_level) {
+        self.level = [[Level alloc] initWithLevel:self.current_level];
+        self.Is_new_level = NO;
+    }
+    
+    // to do: if animation_changed
+    // build animation_array
+    // play animation
+    
+    // to do: if no active_buttons
+      // if no camino_misterioso then doStateChange --> game over
+      // if camino_misterioso
+        // if level == max_level then doStateChane --> you win the game
+        // else doStateChange --> you win the level
+        // level++
+       // _current_level = [_current_level doNextLevel];
+    
+    NSString *mensaje = [NSString stringWithFormat:@"ala, status of level is %@",self.level.estado];
+    self.status = mensaje;
+}
+
 - (void) render {
+    
+    // to do: draw level incluiding active / inactive buttons
+    // to do: draw scene including animation if animation_changed
     
     [self setNeedsDisplay];
     
@@ -43,12 +74,16 @@
     UITouch *touch = [touches anyObject];
     NSUInteger numTaps = [touch tapCount];
     
-    // todo: implement touch code
+    // Back to the main menu screen double taping
     if (numTaps > 1) {
         
         [gameManager doStateChange:[MainMenuGameState class]];
         
     }
+    
+    // to do: this active_button --> inactive()
+    // to do: flag animation_changed
+     
     
 }
 
@@ -67,6 +102,8 @@
     CGContextSetFillColorWithColor(g, [UIColor blackColor].CGColor);
     [@"Rendered from Game Game State" drawAtPoint:CGPointMake(10.0, 20.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
     [@"Double tap for the Main Menu" drawAtPoint:CGPointMake(10.0, 80.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+    
+    [_status drawAtPoint:CGPointMake(10.0, 200.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
 }
 
 
