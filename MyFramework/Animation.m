@@ -14,7 +14,7 @@
     
     if (self = [super init]) {
         
-        self.movie = [[UIImageView alloc] initWithFrame:CGRectMake(120, 95, 86, 193)];
+        self.movie = [[UIImageView alloc] initWithFrame:CGRectMake(120, 125, 86, 193)];
         self.movie.animationImages = [self findMovieFromPath:current_path];
         self.movie.animationDuration = 0.5;
         self.movie.animationRepeatCount = 1;

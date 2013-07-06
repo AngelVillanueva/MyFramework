@@ -72,8 +72,6 @@
         }
     }
     
-    NSString *mensaje = [NSString stringWithFormat:@"ala, status of level is %@",self.level.estado];
-    self.status = mensaje;
 }
 
 - (void) render {
@@ -122,7 +120,10 @@
     [@"Rendered from Game Game State" drawAtPoint:CGPointMake(60.0, 30.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
     [@"Double tap for the Main Menu" drawAtPoint:CGPointMake(70.0, 50.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
     
-    [self.status drawAtPoint:CGPointMake(20.0, 440.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+    
+    
+    self.status = [NSString stringWithFormat:@"current level: %d", self.current_level]; //debug
+    [self.status drawAtPoint:CGPointMake(120.0, 440.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
     
     
     // draw the required animation if any
@@ -144,7 +145,7 @@
     inTimer = nil;
     UIImage *stopImage = [UIImage imageNamed:@"win_1.png"];
     UIImageView *stopImageView = [ [UIImageView alloc] initWithImage:stopImage];
-    stopImageView.frame = CGRectMake(120, 95, 86, 193);
+    stopImageView.frame = CGRectMake(120, 125, 86, 193);
     [self addSubview:stopImageView];
 }
 
