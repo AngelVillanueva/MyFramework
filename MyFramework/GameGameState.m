@@ -28,12 +28,10 @@
 - (id) initWithFrame:(CGRect)frame andManager:(GameStateManager *)manager {
     
     if (self = [super initWithFrame:frame andManager:manager]) {
-        
         // As it is a new game, then let's set the current level as the first one
         self.current_level = gameManager.next_level;
         // Flag that level has changed (so we will need to init the new one - later: update method)
         self.Is_new_level = YES;
-        
     }
     
     return self;
@@ -44,30 +42,22 @@
     
     // If this is a new level we need to initialized it
     if (self.Is_new_level == YES) {
-        
         self.Is_new_level = NO;
         // If there are no more levels to load then load the WinGame state: kudos, you Won the Game! (except if this is the first level, which is always loaded)
         if (self.current_level != 1 && self.current_level > gameManager.maximum_level) {
-            
             [gameManager doStateChange:[WinGameGameState class]];
-            
         } else {
-            
             self.level = [[Level alloc] initWithLevel:self.current_level];
             self.Is_new_animation = YES;
             self.current_path = [[NSMutableArray alloc] initWithArray:@[]];
             self.active_buttons = [self.level.movimientos count];
-            
         }
-        
     }
     
 
     // create animation movie if needed
     if (self.Is_new_animation == YES) {
-        
         self.animation_to_play = [[Animation alloc] initWithPath:self.current_path];
-        
     }
     
     
@@ -97,9 +87,7 @@
     
     // send the Animation movie to the drawRect method if required
     if (self.Is_new_animation == YES) {
-        
         [self addSubview:self.animation_to_play.movie];
-        
     }
     
     
@@ -114,15 +102,7 @@
     
     // Back to the main menu screen double taping
     if (numTaps > 1) {
-        
         [gameManager doStateChange:[MainMenuGameState class]];
-        
-    }
-    
-    if (numTaps == 1) {
-        
-        self.active_buttons--;
-        
     }
     
     // to do: this active_button --> inactive()
@@ -152,14 +132,12 @@
     
     // draw the required animation if any
     if (self.Is_new_animation == YES) {
-        
         self.Is_new_animation = NO;
         [self.animation_to_play.movie startAnimating];
         // callback to show a fix image at the end
         [NSTimer scheduledTimerWithTimeInterval:0.5 target:self
                                        selector:@selector(animationDone:)
                                        userInfo:nil repeats:NO];
-        
     }
     
 }
