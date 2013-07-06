@@ -71,11 +71,6 @@
             [gameManager doStateChange:[WinLevelGameState class]];
         }
     }
-      // if no camino_misterioso then doStateChange --> game over
-      // if camino_misterioso
-        // doStateChange --> you win the level
-        // level++
-       // _current_level = [_current_level doNextLevel];
     
     NSString *mensaje = [NSString stringWithFormat:@"ala, status of level is %@",self.level.estado];
     self.status = mensaje;
@@ -120,14 +115,14 @@
     CGContextRef g = UIGraphicsGetCurrentContext();
     
     // fill background with gray
-    CGContextSetFillColorWithColor(g, [UIColor lightGrayColor].CGColor);
+    CGContextSetFillColorWithColor(g, [UIColor whiteColor].CGColor);
     CGContextFillRect(g, CGRectMake(0, 0, self.frame.size.width, self.frame.size.height));
     // draw text in black
-    CGContextSetFillColorWithColor(g, [UIColor blackColor].CGColor);
-    [@"Rendered from Game Game State" drawAtPoint:CGPointMake(10.0, 20.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
-    [@"Double tap for the Main Menu" drawAtPoint:CGPointMake(10.0, 80.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+    CGContextSetFillColorWithColor(g, [UIColor lightGrayColor].CGColor);
+    [@"Rendered from Game Game State" drawAtPoint:CGPointMake(60.0, 30.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+    [@"Double tap for the Main Menu" drawAtPoint:CGPointMake(70.0, 50.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
     
-    [self.status drawAtPoint:CGPointMake(10.0, 200.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+    [self.status drawAtPoint:CGPointMake(20.0, 440.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
     
     
     // draw the required animation if any
@@ -149,7 +144,7 @@
     inTimer = nil;
     UIImage *stopImage = [UIImage imageNamed:@"win_1.png"];
     UIImageView *stopImageView = [ [UIImageView alloc] initWithImage:stopImage];
-    stopImageView.frame = CGRectMake(60, 95, 86, 193);
+    stopImageView.frame = CGRectMake(120, 95, 86, 193);
     [self addSubview:stopImageView];
 }
 
