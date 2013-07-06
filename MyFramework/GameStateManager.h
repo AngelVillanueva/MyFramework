@@ -10,6 +10,9 @@
 
 @interface GameStateManager : NSObject
 
+@property NSInteger next_level;
+@property NSInteger maximum_level;
+
 - (void) doStateChange:(Class) state;
 
 @end

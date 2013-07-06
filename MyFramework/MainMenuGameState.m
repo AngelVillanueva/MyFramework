@@ -42,6 +42,8 @@
 
 - (IBAction)doGoGame:(id)sender {
     
+    gameManager.next_level = INITIAL_LEVEL;
+    gameManager.maximum_level = MAX_LEVEL;
     [gameManager doStateChange:[GameGameState class]];
     
 }

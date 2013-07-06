@@ -27,19 +27,22 @@
         
         self.estado = [NSString stringWithFormat:@"I'm just created and I'm %d", level ];
         self.movimientos = @[@1, @2, @3, @4];
-        self.maximum_level = level * 2;
+        
+        if (level == 2) {
+            self.movimientos = @[@1, @2, @3, @4, @5, @6, @7, @8];
+        }
         
     }
     
     return self;
 }
 
-- (Level *) doNextLevel {
-    
-    self.estado = @"Subio de nivel";
-    
-    return self;
-    
-}
+//- (Level *) doNextLevel {
+//    
+//    self.estado = @"Subio de nivel";
+//    
+//    return self;
+//    
+//}
 
 @end

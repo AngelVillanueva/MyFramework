@@ -30,7 +30,7 @@
     if (self = [super initWithFrame:frame andManager:manager]) {
         
         // As it is a new game, then let's set the current level as the first one
-        self.current_level = 1;
+        self.current_level = gameManager.next_level;
         // Flag that level has changed (so we will need to init the new one - later: update method)
         self.Is_new_level = YES;
         
@@ -47,7 +47,7 @@
         
         self.Is_new_level = NO;
         // If there are no more levels to load then load the WinGame state: kudos, you Won the Game! (except if this is the first level, which is always loaded)
-        if (self.current_level != 1 && self.current_level > self.level.maximum_level) {
+        if (self.current_level != 1 && self.current_level > gameManager.maximum_level) {
             
             [gameManager doStateChange:[WinGameGameState class]];
             
@@ -72,14 +72,12 @@
     
     
     // to do: if no active_buttons
-    if (self.active_buttons == 4) {
-        NSLog(@"No se puede seguir jugando por A o por B");
+    if (self.active_buttons == 0) {
         // GAME OVER if no active buttons and no winning path
-        if (self.current_path == self.level.camino_misterioso) {
+        if (self.current_path != self.level.camino_misterioso) {
             [gameManager doStateChange:[GameOverGameState class]];
         } else {
-            self.current_level++;
-            NSLog(@"He subio de level hasta %d", self.current_level);
+            gameManager.next_level++;
             [gameManager doStateChange:[WinLevelGameState class]];
         }
     }
@@ -118,6 +116,12 @@
     if (numTaps > 1) {
         
         [gameManager doStateChange:[MainMenuGameState class]];
+        
+    }
+    
+    if (numTaps == 1) {
+        
+        self.active_buttons--;
         
     }
     

@@ -15,9 +15,7 @@
 @property (strong, nonatomic) NSArray *animaciones;
 @property (strong, nonatomic) NSArray *camino_misterioso;
 
-@property NSInteger maximum_level;
-
 - (Level *) initWithLevel:(NSInteger)level;
-- (Level *) doNextLevel;
+//- (Level *) doNextLevel;
 
 @end
