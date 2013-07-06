@@ -72,9 +72,17 @@
         }
     }
     
+    // test button
+    // Buttons
+    UIButton *button_1 = [ UIButton buttonWithType:(UIButtonType) UIButtonTypeRoundedRect ];
+    button_1.frame = CGRectMake(25,100,44,44);
+    [ button_1 setTitle:@"Go!" forState:UIControlStateNormal ];
+    [ button_1 addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside ];
+    [self addSubview:button_1];
+    
 }
 
-- (void) render {
+- (void)render {
     
     // to do: draw level incluiding active / inactive buttons
     
@@ -88,7 +96,7 @@
     
 }
 
-- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [touches anyObject];
     NSUInteger numTaps = [touch tapCount];
@@ -138,8 +146,13 @@
     
 }
 
+- (IBAction)buttonPressed:(id)sender {
+    self.active_buttons--;
+    NSLog(@"Button pressed");
+}
+
 // callback on animationDone to swap last movie frame for a fix image
--(void)animationDone:(NSTimer*)inTimer
+- (void)animationDone:(NSTimer*)inTimer
 {
     [inTimer invalidate];
     inTimer = nil;

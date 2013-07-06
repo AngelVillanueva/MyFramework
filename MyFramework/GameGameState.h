@@ -22,6 +22,7 @@
 
 @property NSString *status;
 
+- (IBAction)buttonPressed:(id)sender;
 - (void)animationDone:(NSTimer *)inTimer;
 
 @end
