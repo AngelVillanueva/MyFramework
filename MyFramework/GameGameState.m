@@ -25,10 +25,10 @@
     if (self = [super initWithFrame:frame andManager:manager]) {
         
         NSLog(@"Game Game State initialized");
-        // As it is a new game, then let's create the first level
+        // As it is a new game, then let's set the current level as the first one
         self.current_level = 1;
-        self.level = [[Level alloc] initWithLevel:self.current_level];
-        self.Is_new_level = NO;
+        // Flag that level has changed (so we will need to init the new one - later: update method)
+        self.Is_new_level = YES;
         
     }
     
@@ -38,7 +38,7 @@
 
 - (void) update {
     
-    // to do: if level_changed then loadLevel()
+    // If this is a new level we need to initialized it
     if (self.Is_new_level) {
         self.level = [[Level alloc] initWithLevel:self.current_level];
         self.Is_new_level = NO;
@@ -103,7 +103,7 @@
     [@"Rendered from Game Game State" drawAtPoint:CGPointMake(10.0, 20.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
     [@"Double tap for the Main Menu" drawAtPoint:CGPointMake(10.0, 80.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
     
-    [_status drawAtPoint:CGPointMake(10.0, 200.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+    [self.status drawAtPoint:CGPointMake(10.0, 200.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
 }
 
 
