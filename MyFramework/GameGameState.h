@@ -8,12 +8,16 @@
 
 #import "GameState.h"
 #import "Level.h"
+#import "Animation.h"
 
 @interface GameGameState : GameState
 
 @property (strong, nonatomic) Level *level;
 @property NSInteger current_level;
 @property BOOL Is_new_level;
+@property BOOL Is_new_animation;
+@property NSMutableArray *current_path;
+@property (strong,nonatomic) Animation *animation_to_play;
 
 @property NSString *status;
 

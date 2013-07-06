@@ -9,6 +9,7 @@
 #import "GameGameState.h"
 #import "MainMenuGameState.h"
 #import "WinGameGameState.h"
+#import "Animation.h"
 
 
 @implementation GameGameState
@@ -40,7 +41,7 @@
 - (void) update {
     
     // If this is a new level we need to initialized it
-    if (self.Is_new_level) {
+    if (self.Is_new_level == YES) {
         
         self.Is_new_level = NO;
         // If there are no more levels to load then load the WinGame state: kudos, you Won the Game! (except if this is the first level, which is always loaded)
@@ -51,6 +52,8 @@
         } else {
             
             self.level = [[Level alloc] initWithLevel:self.current_level];
+            self.Is_new_animation = YES;
+            self.current_path = [[NSMutableArray alloc] initWithArray:@[]];
             
         }
         
@@ -59,6 +62,12 @@
     // to do: if animation_changed
     // build animation_array
     // play animation
+    if (self.Is_new_animation == YES) {
+        
+        self.animation_to_play = [[Animation alloc] initWithPath:self.current_path];
+        NSLog(@"New animation comes here with the following path: %@", self.animation_to_play.movie.animationImages[0]);
+        
+    }
     
     
     // to do: if no active_buttons
@@ -75,7 +84,14 @@
 - (void) render {
     
     // to do: draw level incluiding active / inactive buttons
-    // to do: draw scene including animation if animation_changed
+    
+    // send the Animation movie to the drawRect method if required
+    if (self.Is_new_animation == YES) {
+        
+        [self addSubview:self.animation_to_play.movie];
+        
+    }
+    
     
     [self setNeedsDisplay];
     
@@ -116,6 +132,28 @@
     [@"Double tap for the Main Menu" drawAtPoint:CGPointMake(10.0, 80.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
     
     [self.status drawAtPoint:CGPointMake(10.0, 200.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+    
+    
+    // draw the required animation if any
+    if (self.Is_new_animation == YES) {
+        
+        self.Is_new_animation = NO;
+        [self.animation_to_play.movie startAnimating];
+        NSLog(@"Acabo de mostrar la movie");
+        
+//        [imageView setAnimationDuration:1.0];
+//        [x startAnimating];
+//        x.image = [imgArray lastObject];
+//        [self.view addSubview:x];
+//        [x release];
+        
+        UIImage *stopImage = [UIImage imageNamed:@"win_1.png"];
+        UIImageView *stopImageView = [ [UIImageView alloc] initWithImage:stopImage];
+        stopImageView.frame = CGRectMake(60, 95, 86, 193);
+        [self addSubview:stopImageView];
+        
+    }
+    
 }
 
 
