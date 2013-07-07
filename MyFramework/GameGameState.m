@@ -74,11 +74,21 @@
     
     // test button
     // Buttons
-    UIButton *button_1 = [ UIButton buttonWithType:(UIButtonType) UIButtonTypeRoundedRect ];
-    button_1.frame = CGRectMake(25,100,44,44);
-    [ button_1 setTitle:@"Go!" forState:UIControlStateNormal ];
-    [ button_1 addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside ];
-    [self addSubview:button_1];
+//    UIButton *button_1 = [ UIButton buttonWithType:(UIButtonType) UIButtonTypeRoundedRect ];
+//    button_1.frame = CGRectMake(25,100,44,44);
+//    [ button_1 setTitle:@"Go!" forState:UIControlStateNormal ];
+//    [ button_1 addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside ];
+//    button_1.tag = 10;
+//    [self addSubview:button_1];
+    
+    for (int i = 0; i < self.level.movimientos.count; i++) {
+        UIButton *button = [ UIButton buttonWithType:(UIButtonType) UIButtonTypeRoundedRect ];
+        button.frame = CGRectMake(25,100*i+80,44,44);
+        [ button setTitle:@"Go!" forState:UIControlStateNormal ];
+        [ button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside ];
+        button.tag = 10*i;
+        [self addSubview:button];
+    }
     
 }
 
@@ -90,7 +100,6 @@
     if (self.Is_new_animation == YES) {
         [self addSubview:self.animation_to_play.movie];
     }
-    
     
     [self setNeedsDisplay];
     
@@ -125,7 +134,7 @@
     CGContextFillRect(g, CGRectMake(0, 0, self.frame.size.width, self.frame.size.height));
     // draw text in black
     CGContextSetFillColorWithColor(g, [UIColor lightGrayColor].CGColor);
-    [@"Rendered from Game Game State" drawAtPoint:CGPointMake(60.0, 30.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+    [@"CAMINO MISTERIOSO" drawAtPoint:CGPointMake(80.0, 30.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
     [@"Double tap for the Main Menu" drawAtPoint:CGPointMake(70.0, 50.0) withFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
     
     
