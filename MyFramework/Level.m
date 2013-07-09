@@ -34,8 +34,8 @@
         for(id key in levelDictionary)
             NSLog(@"key=%@ value=%@", key, [levelDictionary objectForKey:key]);
         
-        int movimientos = [levelDictionary objectForKey:@"movimientos"];
-        NSLog(@"movimientos=%@", movimientos);
+        self.movimientos = [[levelDictionary objectForKey:@"movimientos"] integerValue];
+        self.camino_misterioso = [levelDictionary objectForKey:@"camino_misterioso"];
         
         
     }

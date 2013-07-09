@@ -50,7 +50,7 @@
             self.level = [[Level alloc] initWithLevel:self.current_level];
             self.Is_new_animation = YES;
             self.current_path = [[NSMutableArray alloc] initWithArray:@[]];
-            self.active_buttons = [self.level.movimientos];
+            self.active_buttons = self.level.movimientos;
         }
     }
     
