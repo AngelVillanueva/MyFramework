@@ -50,6 +50,7 @@
         } else {
             self.level = [[Level alloc] initWithLevel:self.current_level];
             self.Is_new_animation = YES;
+            self.buttons_added = NO;
             self.current_path = [[NSMutableArray alloc] initWithArray:@[]];
             self.active_buttons = self.level.movimientos.count;
         }
@@ -73,23 +74,20 @@
         }
     }
     
-    // test button
-    // Buttons
-//    UIButton *button_1 = [ UIButton buttonWithType:(UIButtonType) UIButtonTypeRoundedRect ];
-//    button_1.frame = CGRectMake(25,100,44,44);
-//    [ button_1 setTitle:@"Go!" forState:UIControlStateNormal ];
-//    [ button_1 addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside ];
-//    button_1.tag = 10;
-//    [self addSubview:button_1];
-    
-    for (int i = 0; i < self.level.movimientos.count; i++) {
-        //UIButton *button = [ UIButton buttonWithType:(UIButtonType) UIButtonTypeRoundedRect ];
-        NSString *movKey = [ NSString stringWithFormat:@"%@", self.level.movimientos[i] ];
-        UIButton *button = [Movimiento forKey:movKey];
-        //button.frame = CGRectMake(25,100*i+80,44,44);
-        //[ button setTitle:@"Go!" forState:UIControlStateNormal ];
-        [ button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside ];
-        [self addSubview:button];
+
+    // add active buttons if not added yet
+    if (self.buttons_added == NO) {
+        for (int i = 0; i < self.level.movimientos.count; i++) {
+            // create button based on Level plist --> Movimiento plist
+            NSString *movimientoKey = [ NSString stringWithFormat:@"%@", self.level.movimientos[i] ];
+            UIButton *button = [Movimiento forKey:movimientoKey];
+            // link button to action
+            [ button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside ];
+            // add button to View
+            [self addSubview:button];
+            // not draw the buttons again
+            self.buttons_added = YES;
+        }
     }
     
 }
