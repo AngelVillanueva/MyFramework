@@ -51,7 +51,7 @@
             self.level = [[Level alloc] initWithLevel:self.current_level];
             self.Is_new_animation = YES;
             self.buttons_added = NO;
-            self.current_path = [[NSMutableArray alloc] initWithArray:@[]];
+            self.current_path = [[NSMutableArray alloc] initWithCapacity:self.level.movimientos.count];
             self.active_buttons = self.level.movimientos.count;
         }
     }
@@ -66,7 +66,7 @@
     // to do: if no active_buttons
     if (self.active_buttons == 0) {
         // GAME OVER if no active buttons and no winning path
-        if (self.current_path != self.level.camino_misterioso) {
+        if (![self.current_path isEqualToArray:self.level.camino_misterioso]) {
             [gameManager doStateChange:[GameOverGameState class]];
         } else {
             gameManager.next_level++;
@@ -163,6 +163,9 @@
     // inactive already pressed button
     UIButton *thisButton = (UIButton *)sender;
     thisButton.enabled = NO;
+    // add the button action to the current path, looking for the Camino Misterioso
+    NSString *path = thisButton.titleLabel.text;
+    [self.current_path addObject:path];
 }
 
 // callback on animationDone to swap last movie frame for a fix image

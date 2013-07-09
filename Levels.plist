@@ -31,7 +31,12 @@
 			</array>
 		</array>
 		<key>camino_misterioso</key>
-		<string>4321</string>
+		<array>
+			<string>Sword</string>
+			<string>Map</string>
+			<string>Bomb</string>
+			<string>Ship</string>
+		</array>
 	</dict>
 	<key>2</key>
 	<dict>
