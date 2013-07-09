@@ -148,6 +148,9 @@
     // draw the required animation if any
     if (self.Is_new_animation == YES) {
         self.Is_new_animation = NO;
+        // remove stopImage from previous Animation
+        [[self viewWithTag:999] removeFromSuperview];
+        // start animation
         [self.animation_to_play.movie startAnimating];
         // callback to show a fix image at the end
         [NSTimer scheduledTimerWithTimeInterval:0.5 target:self
@@ -166,6 +169,8 @@
     // add the button action to the current path, looking for the Camino Misterioso
     NSString *path = thisButton.titleLabel.text;
     [self.current_path addObject:path];
+    // trigger new animation
+    self.Is_new_animation = YES;
 }
 
 // callback on animationDone to swap last movie frame for a fix image
@@ -173,9 +178,13 @@
 {
     [inTimer invalidate];
     inTimer = nil;
+    // recover stopImage for a given animation
     UIImage *stopImage = [UIImage imageNamed:@"win_1.png"];
     UIImageView *stopImageView = [ [UIImageView alloc] initWithImage:stopImage];
     stopImageView.frame = CGRectMake(120, 125, 86, 193);
+    // set tag to stopImage to pave the road for its future removal
+    stopImageView.tag = 999;
+    // add stopImage to view
     [self addSubview:stopImageView];
    
 }
