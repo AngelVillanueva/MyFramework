@@ -7,68 +7,52 @@
 		<key>tag</key>
 		<integer>10</integer>
 		<key>title</key>
-		<string>Barco</string>
-		<key>posX</key>
-		<integer>25</integer>
-		<key>posY</key>
-		<integer>80</integer>
+		<string>Ship</string>
 		<key>width</key>
 		<integer>44</integer>
 		<key>height</key>
 		<integer>44</integer>
 		<key>image</key>
-		<string>timon.png</string>
+		<string>ship.png</string>
 	</dict>
 	<key>2</key>
 	<dict>
 		<key>tag</key>
 		<integer>20</integer>
 		<key>title</key>
-		<string>Espada</string>
-		<key>posX</key>
-		<integer>25</integer>
-		<key>posY</key>
-		<integer>180</integer>
+		<string>Sword</string>
 		<key>width</key>
 		<integer>44</integer>
 		<key>height</key>
 		<integer>44</integer>
 		<key>image</key>
-		<string>buzo.png</string>
+		<string>sword.png</string>
 	</dict>
 	<key>3</key>
 	<dict>
 		<key>tag</key>
 		<integer>30</integer>
 		<key>title</key>
-		<string>Mapa</string>
-		<key>posX</key>
-		<integer>25</integer>
-		<key>posY</key>
-		<integer>280</integer>
+		<string>Map</string>
 		<key>width</key>
 		<integer>44</integer>
 		<key>height</key>
 		<integer>44</integer>
 		<key>image</key>
-		<string>baul.png</string>
+		<string>map.png</string>
 	</dict>
 	<key>4</key>
 	<dict>
 		<key>tag</key>
 		<integer>40</integer>
 		<key>title</key>
-		<string>Caballo</string>
-		<key>posX</key>
-		<integer>25</integer>
-		<key>posY</key>
-		<integer>380</integer>
+		<string>Bomb</string>
 		<key>width</key>
 		<integer>44</integer>
 		<key>height</key>
 		<integer>44</integer>
 		<key>image</key>
-		<string>bomba.png</string>
+		<string>bomb.png</string>
 	</dict>
 	<key>5</key>
 	<dict>
@@ -76,10 +60,6 @@
 		<integer>50</integer>
 		<key>title</key>
 		<string>Caballo</string>
-		<key>posX</key>
-		<integer>260</integer>
-		<key>posY</key>
-		<integer>80</integer>
 		<key>width</key>
 		<integer>44</integer>
 		<key>height</key>
@@ -93,10 +73,6 @@
 		<integer>60</integer>
 		<key>title</key>
 		<string>Caballo</string>
-		<key>posX</key>
-		<integer>260</integer>
-		<key>posY</key>
-		<integer>180</integer>
 		<key>width</key>
 		<integer>44</integer>
 		<key>height</key>
@@ -110,10 +86,6 @@
 		<integer>70</integer>
 		<key>title</key>
 		<string>Caballo</string>
-		<key>posX</key>
-		<integer>260</integer>
-		<key>posY</key>
-		<integer>280</integer>
 		<key>width</key>
 		<integer>44</integer>
 		<key>height</key>
@@ -127,10 +99,6 @@
 		<integer>80</integer>
 		<key>title</key>
 		<string>Caballo</string>
-		<key>posX</key>
-		<integer>260</integer>
-		<key>posY</key>
-		<integer>380</integer>
 		<key>width</key>
 		<integer>44</integer>
 		<key>height</key>

@@ -19,15 +19,15 @@
     return self;
 }
 
-+ (UIButton *) forKey:(NSString *)key {
++ (UIButton *) forKey:(NSString *)key andXpos:(CGFloat)x andYpos:(CGFloat)y {
     
     NSDictionary *mainDictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Movimientos" ofType:@"plist"]];
     NSString *movimientoKey = [NSString stringWithFormat:@"%@", key];
     NSDictionary *movimientoDictionary = [mainDictionary objectForKey:movimientoKey];
     
     NSString *title = [movimientoDictionary objectForKey:@"title"];
-    CGFloat x = [[movimientoDictionary objectForKey:@"posX"] floatValue];
-    CGFloat y = [[movimientoDictionary objectForKey:@"posY"] floatValue];
+    //CGFloat x = [[movimientoDictionary objectForKey:@"posX"] floatValue];
+    //CGFloat y = [[movimientoDictionary objectForKey:@"posY"] floatValue];
     CGFloat w = [[movimientoDictionary objectForKey:@"width"] floatValue];
     CGFloat h = [[movimientoDictionary objectForKey:@"height"] floatValue];
     NSInteger tag = [[movimientoDictionary objectForKey:@"tag"] integerValue];
@@ -53,3 +53,8 @@
 */
 
 @end
+
+
+//NSMutableArray *myArray = [[NSMutableArray alloc] initWithArray:@[@2,@3,@4,@6,@1]];
+//[myArray shuffle];
+//NSLog(@"and is %@", myArray);

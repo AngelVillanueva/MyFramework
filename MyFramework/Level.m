@@ -7,6 +7,7 @@
 //
 
 #import "Level.h"
+#import "NSMutableArray_Shuffling.h"
 
 @implementation Level
 
@@ -30,25 +31,19 @@
         NSString *levelKey = [NSString stringWithFormat:@"%d", level];
         NSDictionary *levelDictionary = [mainDictionary objectForKey:levelKey];
         
-        // To print out all key-value pairs in the NSDictionary myDict
-        for(id key in levelDictionary)
-            NSLog(@"key=%@ value=%@", key, [levelDictionary objectForKey:key]);
-        
         self.movimientos = [levelDictionary objectForKey:@"movimientos"];
         self.camino_misterioso = [levelDictionary objectForKey:@"camino_misterioso"];
-        
-        
+        // random assignment of button position on canvas
+        NSMutableArray *posArray = [[NSMutableArray alloc] initWithArray:[levelDictionary objectForKey:@"posiciones"]];
+        [posArray shuffle];
+        self.posiciones = [[NSMutableArray alloc] initWithArray:posArray];
     }
     
     return self;
 }
 
-//- (Level *) doNextLevel {
-//    
-//    self.estado = @"Subio de nivel";
-//    
-//    return self;
-//    
-//}
+// To print out all key-value pairs in the NSDictionary myDict
+//        for(id key in levelDictionary)
+//            NSLog(@"key=%@ value=%@", key, [levelDictionary objectForKey:key]);
 
 @end

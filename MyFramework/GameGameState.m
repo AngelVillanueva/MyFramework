@@ -80,7 +80,9 @@
         for (int i = 0; i < self.level.movimientos.count; i++) {
             // create button based on Level plist --> Movimiento plist
             NSString *movimientoKey = [ NSString stringWithFormat:@"%@", self.level.movimientos[i] ];
-            UIButton *button = [Movimiento forKey:movimientoKey];
+            CGFloat x = [self.level.posiciones[i][0] floatValue];
+            CGFloat y = [self.level.posiciones[i][1] floatValue];
+            UIButton *button = [Movimiento forKey:movimientoKey andXpos:x andYpos:y];
             // link button to action
             [ button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside ];
             // add button to View
@@ -172,6 +174,7 @@
     UIImageView *stopImageView = [ [UIImageView alloc] initWithImage:stopImage];
     stopImageView.frame = CGRectMake(120, 125, 86, 193);
     [self addSubview:stopImageView];
+   
 }
 
 

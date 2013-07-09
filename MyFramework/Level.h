@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSString *estado;
 @property (strong, nonatomic) NSArray *movimientos;
+@property (strong, nonatomic) NSMutableArray *posiciones;
 @property (strong, nonatomic) NSArray *animaciones;
 @property (strong, nonatomic) NSArray *camino_misterioso;
 

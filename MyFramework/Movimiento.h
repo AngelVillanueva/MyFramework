@@ -10,6 +10,6 @@
 
 @interface Movimiento : UIButton
 
-+ (UIButton *) forKey:(NSString *)key;
++ (UIButton *) forKey:(NSString *)key andXpos:(CGFloat)x andYpos:(CGFloat)y;
 
 @end
