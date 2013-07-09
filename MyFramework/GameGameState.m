@@ -12,6 +12,7 @@
 #import "WinLevelGameState.h"
 #import "GameOverGameState.h"
 #import "Animation.h"
+#import "Movimiento.h"
 
 
 @implementation GameGameState
@@ -50,7 +51,7 @@
             self.level = [[Level alloc] initWithLevel:self.current_level];
             self.Is_new_animation = YES;
             self.current_path = [[NSMutableArray alloc] initWithArray:@[]];
-            self.active_buttons = self.level.movimientos;
+            self.active_buttons = self.level.movimientos.count;
         }
     }
     
@@ -81,12 +82,13 @@
 //    button_1.tag = 10;
 //    [self addSubview:button_1];
     
-    for (int i = 0; i < self.level.movimientos; i++) {
-        UIButton *button = [ UIButton buttonWithType:(UIButtonType) UIButtonTypeRoundedRect ];
-        button.frame = CGRectMake(25,100*i+80,44,44);
-        [ button setTitle:@"Go!" forState:UIControlStateNormal ];
+    for (int i = 0; i < self.level.movimientos.count; i++) {
+        //UIButton *button = [ UIButton buttonWithType:(UIButtonType) UIButtonTypeRoundedRect ];
+        NSString *movKey = [ NSString stringWithFormat:@"%@", self.level.movimientos[i] ];
+        UIButton *button = [Movimiento forKey:movKey];
+        //button.frame = CGRectMake(25,100*i+80,44,44);
+        //[ button setTitle:@"Go!" forState:UIControlStateNormal ];
         [ button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside ];
-        button.tag = 10*i;
         [self addSubview:button];
     }
     

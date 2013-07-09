@@ -5,14 +5,28 @@
 	<key>1</key>
 	<dict>
 		<key>movimientos</key>
-		<integer>4</integer>
+		<array>
+			<string>1</string>
+			<string>2</string>
+			<string>3</string>
+			<string>4</string>
+		</array>
 		<key>camino_misterioso</key>
 		<string>4321</string>
 	</dict>
 	<key>2</key>
 	<dict>
 		<key>movimientos</key>
-		<integer>8</integer>
+		<array>
+			<string>1</string>
+			<string>2</string>
+			<string>3</string>
+			<string>4</string>
+			<string>5</string>
+			<string>6</string>
+			<string>7</string>
+			<string>8</string>
+		</array>
 		<key>camino_misterioso</key>
 		<string>12345678</string>
 	</dict>
