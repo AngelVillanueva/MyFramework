@@ -15,7 +15,7 @@
 		<array>
 			<array>
 				<integer>25</integer>
-				<string>180</string>
+				<integer>180</integer>
 			</array>
 			<array>
 				<integer>260</integer>
@@ -23,7 +23,7 @@
 			</array>
 			<array>
 				<integer>25</integer>
-				<string>280</string>
+				<integer>280</integer>
 			</array>
 			<array>
 				<integer>260</integer>
@@ -51,8 +51,52 @@
 			<string>7</string>
 			<string>8</string>
 		</array>
+		<key>posiciones</key>
+		<array>
+			<array>
+				<integer>25</integer>
+				<integer>180</integer>
+			</array>
+			<array>
+				<integer>260</integer>
+				<integer>180</integer>
+			</array>
+			<array>
+				<integer>25</integer>
+				<integer>280</integer>
+			</array>
+			<array>
+				<integer>260</integer>
+				<integer>280</integer>
+			</array>
+			<array>
+				<integer>25</integer>
+				<integer>80</integer>
+			</array>
+			<array>
+				<integer>260</integer>
+				<integer>80</integer>
+			</array>
+			<array>
+				<integer>25</integer>
+				<integer>380</integer>
+			</array>
+			<array>
+				<integer>260</integer>
+				<integer>380</integer>
+			</array>
+		</array>
 		<key>camino_misterioso</key>
-		<string>12345678</string>
+		<array>
+			<string>Sword</string>
+			<string>Map</string>
+			<string>Bomb</string>
+			<string>Ship</string>
+			<string>Snow</string>
+			<string>Sleigh</string>
+			<string>Snowman</string>
+			<string>Bed</string>
+		</array>
 	</dict>
 </dict>
 </plist>

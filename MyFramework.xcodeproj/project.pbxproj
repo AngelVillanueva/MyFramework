@@ -12,6 +12,10 @@
 		84544C40178C59C200183067 /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = 84544C3C178C59C200183067 /* ship.png */; };
 		84544C41178C59C200183067 /* sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 84544C3D178C59C200183067 /* sword.png */; };
 		84544C47178C604E00183067 /* NSMutableArray_Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = 84544C46178C604E00183067 /* NSMutableArray_Shuffling.m */; };
+		84544C4D178C864600183067 /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = 84544C49178C864600183067 /* bed.png */; };
+		84544C4E178C864600183067 /* sleigh.png in Resources */ = {isa = PBXBuildFile; fileRef = 84544C4A178C864600183067 /* sleigh.png */; };
+		84544C4F178C864600183067 /* snow.png in Resources */ = {isa = PBXBuildFile; fileRef = 84544C4B178C864600183067 /* snow.png */; };
+		84544C50178C864600183067 /* snowman.png in Resources */ = {isa = PBXBuildFile; fileRef = 84544C4C178C864600183067 /* snowman.png */; };
 		84B66094178C06B300E8BFEA /* Movimiento.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B66093178C06B300E8BFEA /* Movimiento.m */; };
 		84B66096178C112900E8BFEA /* Movimientos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84B66095178C112900E8BFEA /* Movimientos.plist */; };
 		84B931BF1785F494009500B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B931BE1785F494009500B8 /* UIKit.framework */; };
@@ -65,6 +69,10 @@
 		84544C3D178C59C200183067 /* sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sword.png; path = ../sword.png; sourceTree = "<group>"; };
 		84544C45178C602900183067 /* NSMutableArray_Shuffling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArray_Shuffling.h; sourceTree = "<group>"; };
 		84544C46178C604E00183067 /* NSMutableArray_Shuffling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArray_Shuffling.m; sourceTree = "<group>"; };
+		84544C49178C864600183067 /* bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bed.png; sourceTree = "<group>"; };
+		84544C4A178C864600183067 /* sleigh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleigh.png; sourceTree = "<group>"; };
+		84544C4B178C864600183067 /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
+		84544C4C178C864600183067 /* snowman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowman.png; sourceTree = "<group>"; };
 		84B66092178C06B300E8BFEA /* Movimiento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movimiento.h; sourceTree = "<group>"; };
 		84B66093178C06B300E8BFEA /* Movimiento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movimiento.m; sourceTree = "<group>"; };
 		84B66095178C112900E8BFEA /* Movimientos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Movimientos.plist; sourceTree = "<group>"; };
@@ -158,6 +166,10 @@
 				84544C3B178C59C200183067 /* map.png */,
 				84544C3C178C59C200183067 /* ship.png */,
 				84544C3D178C59C200183067 /* sword.png */,
+				84544C49178C864600183067 /* bed.png */,
+				84544C4A178C864600183067 /* sleigh.png */,
+				84544C4B178C864600183067 /* snow.png */,
+				84544C4C178C864600183067 /* snowman.png */,
 			);
 			name = "movimientos-icons";
 			sourceTree = "<group>";
@@ -384,6 +396,10 @@
 				84544C3F178C59C200183067 /* map.png in Resources */,
 				84544C40178C59C200183067 /* ship.png in Resources */,
 				84544C41178C59C200183067 /* sword.png in Resources */,
+				84544C4D178C864600183067 /* bed.png in Resources */,
+				84544C4E178C864600183067 /* sleigh.png in Resources */,
+				84544C4F178C864600183067 /* snow.png in Resources */,
+				84544C50178C864600183067 /* snowman.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

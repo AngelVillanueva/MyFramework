@@ -59,52 +59,52 @@
 		<key>tag</key>
 		<integer>50</integer>
 		<key>title</key>
-		<string>Caballo</string>
+		<string>Snow</string>
 		<key>width</key>
 		<integer>44</integer>
 		<key>height</key>
 		<integer>44</integer>
 		<key>image</key>
-		<string>bomba.png</string>
+		<string>snow.png</string>
 	</dict>
 	<key>6</key>
 	<dict>
 		<key>tag</key>
 		<integer>60</integer>
 		<key>title</key>
-		<string>Caballo</string>
+		<string>Sleigh</string>
 		<key>width</key>
 		<integer>44</integer>
 		<key>height</key>
 		<integer>44</integer>
 		<key>image</key>
-		<string>bomba.png</string>
+		<string>sleigh.png</string>
 	</dict>
 	<key>7</key>
 	<dict>
 		<key>tag</key>
 		<integer>70</integer>
 		<key>title</key>
-		<string>Caballo</string>
+		<string>Snowman</string>
 		<key>width</key>
 		<integer>44</integer>
 		<key>height</key>
 		<integer>44</integer>
 		<key>image</key>
-		<string>bomba.png</string>
+		<string>snowman.png</string>
 	</dict>
 	<key>8</key>
 	<dict>
 		<key>tag</key>
 		<integer>80</integer>
 		<key>title</key>
-		<string>Caballo</string>
+		<string>Bed</string>
 		<key>width</key>
 		<integer>44</integer>
 		<key>height</key>
 		<integer>44</integer>
 		<key>image</key>
-		<string>bomba.png</string>
+		<string>bed.png</string>
 	</dict>
 </dict>
 </plist>
