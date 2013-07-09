@@ -48,6 +48,7 @@
 		84B9325317884ABC009500B8 /* win_16.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B9324317884ABB009500B8 /* win_16.png */; };
 		84B9325717888E6C009500B8 /* GameOverGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B9325617888E6C009500B8 /* GameOverGameState.m */; };
 		84B9325A17889001009500B8 /* WinLevelGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B9325917889001009500B8 /* WinLevelGameState.m */; };
+		84B9325E1789E0CA009500B8 /* Levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84B9325D1789E0CA009500B8 /* Levels.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		84B9325617888E6C009500B8 /* GameOverGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverGameState.m; sourceTree = "<group>"; };
 		84B9325817889001009500B8 /* WinLevelGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WinLevelGameState.h; path = ../WinLevelGameState.h; sourceTree = "<group>"; };
 		84B9325917889001009500B8 /* WinLevelGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WinLevelGameState.m; path = ../WinLevelGameState.m; sourceTree = "<group>"; };
+		84B9325D1789E0CA009500B8 /* Levels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Levels.plist; path = ../Levels.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 			children = (
 				84B9320A17871D31009500B8 /* Level.h */,
 				84B9320B17871D31009500B8 /* Level.m */,
+				84B9325D1789E0CA009500B8 /* Levels.plist */,
 				84B93211178844E3009500B8 /* Animation.h */,
 				84B93212178844E4009500B8 /* Animation.m */,
 			);
@@ -326,6 +329,7 @@
 				84B9325117884ABC009500B8 /* win_14.png in Resources */,
 				84B9325217884ABC009500B8 /* win_15.png in Resources */,
 				84B9325317884ABC009500B8 /* win_16.png in Resources */,
+				84B9325E1789E0CA009500B8 /* Levels.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

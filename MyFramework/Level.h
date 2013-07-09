@@ -11,7 +11,7 @@
 @interface Level : NSObject
 
 @property (strong, nonatomic) NSString *estado;
-@property (strong, nonatomic) NSArray *movimientos;
+@property NSInteger movimientos;
 @property (strong, nonatomic) NSArray *animaciones;
 @property (strong, nonatomic) NSArray *camino_misterioso;
 

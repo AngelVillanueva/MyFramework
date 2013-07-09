@@ -25,12 +25,18 @@
     
     if (self = [super init]) {
         
-        self.estado = [NSString stringWithFormat:@"I'm just created and I'm %d", level ];
-        self.movimientos = @[@1, @2, @3, @4];
+        // Load the file content and read the data into arrays
+        NSDictionary *mainDictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Levels" ofType:@"plist"]];
+        NSString *levelKey = [NSString stringWithFormat:@"%d", level];
+        NSDictionary *levelDictionary = [mainDictionary objectForKey:levelKey];
         
-        if (level == 2) {
-            self.movimientos = @[@1, @2, @3, @4, @5, @6, @7, @8];
-        }
+        // To print out all key-value pairs in the NSDictionary myDict
+        for(id key in levelDictionary)
+            NSLog(@"key=%@ value=%@", key, [levelDictionary objectForKey:key]);
+        
+        int movimientos = [levelDictionary objectForKey:@"movimientos"];
+        NSLog(@"movimientos=%@", movimientos);
+        
         
     }
     

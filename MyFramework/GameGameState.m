@@ -50,7 +50,7 @@
             self.level = [[Level alloc] initWithLevel:self.current_level];
             self.Is_new_animation = YES;
             self.current_path = [[NSMutableArray alloc] initWithArray:@[]];
-            self.active_buttons = [self.level.movimientos count];
+            self.active_buttons = [self.level.movimientos];
         }
     }
     
@@ -81,7 +81,7 @@
 //    button_1.tag = 10;
 //    [self addSubview:button_1];
     
-    for (int i = 0; i < self.level.movimientos.count; i++) {
+    for (int i = 0; i < self.level.movimientos; i++) {
         UIButton *button = [ UIButton buttonWithType:(UIButtonType) UIButtonTypeRoundedRect ];
         button.frame = CGRectMake(25,100*i+80,44,44);
         [ button setTitle:@"Go!" forState:UIControlStateNormal ];
