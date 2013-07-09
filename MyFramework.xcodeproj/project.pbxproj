@@ -150,6 +150,29 @@
 			name = "movimientos-icons";
 			sourceTree = "<group>";
 		};
+		84B660A0178C289300E8BFEA /* animaciones */ = {
+			isa = PBXGroup;
+			children = (
+				84B9323417884AB3009500B8 /* win_1.png */,
+				84B9323517884AB4009500B8 /* win_2.png */,
+				84B9323617884AB4009500B8 /* win_3.png */,
+				84B9323717884AB5009500B8 /* win_4.png */,
+				84B9323817884AB5009500B8 /* win_5.png */,
+				84B9323917884AB6009500B8 /* win_6.png */,
+				84B9323A17884AB6009500B8 /* win_7.png */,
+				84B9323B17884AB6009500B8 /* win_8.png */,
+				84B9323C17884AB7009500B8 /* win_9.png */,
+				84B9323D17884AB8009500B8 /* win_10.png */,
+				84B9323E17884AB8009500B8 /* win_11.png */,
+				84B9323F17884AB9009500B8 /* win_12.png */,
+				84B9324017884ABA009500B8 /* win_13.png */,
+				84B9324117884ABA009500B8 /* win_14.png */,
+				84B9324217884ABB009500B8 /* win_15.png */,
+				84B9324317884ABB009500B8 /* win_16.png */,
+			);
+			name = animaciones;
+			sourceTree = "<group>";
+		};
 		84B931B21785F494009500B8 = {
 			isa = PBXGroup;
 			children = (
@@ -262,22 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				84B6609F178C1E1A00E8BFEA /* movimientos-icons */,
-				84B9323417884AB3009500B8 /* win_1.png */,
-				84B9323517884AB4009500B8 /* win_2.png */,
-				84B9323617884AB4009500B8 /* win_3.png */,
-				84B9323717884AB5009500B8 /* win_4.png */,
-				84B9323817884AB5009500B8 /* win_5.png */,
-				84B9323917884AB6009500B8 /* win_6.png */,
-				84B9323A17884AB6009500B8 /* win_7.png */,
-				84B9323B17884AB6009500B8 /* win_8.png */,
-				84B9323C17884AB7009500B8 /* win_9.png */,
-				84B9323D17884AB8009500B8 /* win_10.png */,
-				84B9323E17884AB8009500B8 /* win_11.png */,
-				84B9323F17884AB9009500B8 /* win_12.png */,
-				84B9324017884ABA009500B8 /* win_13.png */,
-				84B9324117884ABA009500B8 /* win_14.png */,
-				84B9324217884ABB009500B8 /* win_15.png */,
-				84B9324317884ABB009500B8 /* win_16.png */,
+				84B660A0178C289300E8BFEA /* animaciones */,
 			);
 			name = Assets;
 			sourceTree = "<group>";

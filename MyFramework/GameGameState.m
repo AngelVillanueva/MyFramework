@@ -86,7 +86,7 @@
             // add button to View
             [self addSubview:button];
             // not draw the buttons again
-            self.buttons_added = YES;
+            self.buttons_added = YES;   
         }
     }
     
@@ -156,8 +156,11 @@
 }
 
 - (IBAction)buttonPressed:(id)sender {
+    // substracts one from active_button to check if the game is over
     self.active_buttons--;
-    NSLog(@"Button pressed");
+    // inactive already pressed button
+    UIButton *thisButton = (UIButton *)sender;
+    thisButton.enabled = NO;
 }
 
 // callback on animationDone to swap last movie frame for a fix image
