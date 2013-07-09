@@ -53,18 +53,20 @@
             self.buttons_added = NO;
             self.current_path = [[NSMutableArray alloc] initWithCapacity:self.level.movimientos.count];
             self.active_buttons = self.level.movimientos.count;
+            self.Can_finish_level = YES;
         }
     }
     
 
     // create animation movie if needed
     if (self.Is_new_animation == YES) {
+        self.Can_finish_level = NO;
         self.animation_to_play = [[Animation alloc] initWithPath:self.current_path];
     }
     
     
     // to do: if no active_buttons
-    if (self.active_buttons == 0) {
+    if (self.active_buttons == 0 && self.Can_finish_level == YES) {
         // GAME OVER if no active buttons and no winning path
         if (![self.current_path isEqualToArray:self.level.camino_misterioso]) {
             [gameManager doStateChange:[GameOverGameState class]];
@@ -186,6 +188,8 @@
     stopImageView.tag = 999;
     // add stopImage to view
     [self addSubview:stopImageView];
+    //
+    self.Can_finish_level = YES;
    
 }
 

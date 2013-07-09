@@ -17,6 +17,6 @@
 #define IPHONE_HEIGHT 480
 
 #define INITIAL_LEVEL 1
-#define MAX_LEVEL 3
+#define MAX_LEVEL 2
 
 

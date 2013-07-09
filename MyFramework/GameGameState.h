@@ -16,6 +16,7 @@
 @property NSInteger current_level;
 @property BOOL Is_new_level;
 @property BOOL Is_new_animation;
+@property BOOL Can_finish_level;
 @property BOOL buttons_added;
 @property NSMutableArray *current_path;
 @property (strong,nonatomic) Animation *animation_to_play;
