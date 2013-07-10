@@ -54,7 +54,7 @@
             self.current_path = [[NSMutableArray alloc] initWithCapacity:self.level.movimientos.count];
             self.active_buttons = self.level.movimientos.count;
             self.Can_finish_level = YES;
-            self.animation_key = @"";
+            self.animation_key = @"0";
         }
     }
     
@@ -62,7 +62,6 @@
     // create animation movie if needed
     if (self.Is_new_animation == YES) {
         self.Can_finish_level = NO;
-        //self.animation_to_play = [[Animation alloc] initWithPath:self.current_path];
         self.animation_to_play = [[Animation alloc] initWithPath:self.animation_key andLevel:self.current_level];
     }
     
@@ -112,7 +111,6 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    
     UITouch *touch = [touches anyObject];
     NSUInteger numTaps = [touch tapCount];
     
@@ -120,11 +118,6 @@
     if (numTaps > 1) {
         [gameManager doStateChange:[MainMenuGameState class]];
     }
-    
-    // to do: this active_button --> inactive()
-    // to do: flag animation_changed
-     
-    
 }
 
 /*
@@ -175,7 +168,6 @@
     [self.current_path addObject:path];
     // concatenate the button tag with the previous chain to build the animation key to select the right frames in plist
     self.animation_key = [ NSString stringWithFormat:@"%@%@", self.animation_key, [@(thisButton.tag)  stringValue]];
-    NSLog(@"an: %@", self.animation_key);
     // trigger new animation
     self.Is_new_animation = YES;
 }

@@ -12,8 +12,6 @@
 
 @property UIImageView *movie;
 
-- (Animation *)initWithPath:current_path;
-- (NSMutableArray *)findMovieFromPath:current_path;
 - (Animation *)initWithPath:(NSString *)animation_key andLevel:(NSInteger)level;
 - (NSMutableArray *)findMovieFromPath:(NSString *)animation_key andLevel:(NSInteger)level;
 

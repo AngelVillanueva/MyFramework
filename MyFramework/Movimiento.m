@@ -26,8 +26,6 @@
     NSDictionary *movimientoDictionary = [mainDictionary objectForKey:movimientoKey];
     
     NSString *title = [movimientoDictionary objectForKey:@"title"];
-    //CGFloat x = [[movimientoDictionary objectForKey:@"posX"] floatValue];
-    //CGFloat y = [[movimientoDictionary objectForKey:@"posY"] floatValue];
     CGFloat w = [[movimientoDictionary objectForKey:@"width"] floatValue];
     CGFloat h = [[movimientoDictionary objectForKey:@"height"] floatValue];
     NSInteger tag = [[movimientoDictionary objectForKey:@"tag"] integerValue];
@@ -53,8 +51,3 @@
 */
 
 @end
-
-
-//NSMutableArray *myArray = [[NSMutableArray alloc] initWithArray:@[@2,@3,@4,@6,@1]];
-//[myArray shuffle];
-//NSLog(@"and is %@", myArray);
