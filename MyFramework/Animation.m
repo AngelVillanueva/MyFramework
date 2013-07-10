@@ -13,10 +13,20 @@
 
 - (Animation *)initWithPath:(NSString *)animacion_key andLevel:(NSInteger)level{
     if (self = [super init]) {
-        
-        self.movie = [[UIImageView alloc] initWithFrame:CGRectMake(120, 125, 86, 193)];
+        // read animacion properties from Levels plist
+        NSDictionary *mainDictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Levels" ofType:@"plist"]];
+        NSString *levelKey = [NSString stringWithFormat:@"%d", level];
+        NSDictionary *levelDictionary = [mainDictionary objectForKey:levelKey];
+        NSDictionary *animacionDictionary = [levelDictionary objectForKey:@"animacion"];
+        // assign position and measures
+        CGFloat x = [[animacionDictionary objectForKey:@"xPos"] floatValue];
+        CGFloat y = [[animacionDictionary objectForKey:@"yPos"] floatValue];
+        CGFloat w = [[animacionDictionary objectForKey:@"width"] floatValue];
+        CGFloat h = [[animacionDictionary objectForKey:@"height"] floatValue];
+        self.movie = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, w, h)];
+        // assign images and duration
         self.movie.animationImages = [self findMovieFromPath:animacion_key andLevel:level];
-        self.movie.animationDuration = 0.5;
+        self.movie.animationDuration = self.movie.animationImages.count / 30;
         self.movie.animationRepeatCount = 1;
     }
     return self;
