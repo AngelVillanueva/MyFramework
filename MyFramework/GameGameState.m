@@ -54,6 +54,7 @@
             self.current_path = [[NSMutableArray alloc] initWithCapacity:self.level.movimientos.count];
             self.active_buttons = self.level.movimientos.count;
             self.Can_finish_level = YES;
+            self.animation_key = @"";
         }
     }
     
@@ -61,7 +62,8 @@
     // create animation movie if needed
     if (self.Is_new_animation == YES) {
         self.Can_finish_level = NO;
-        self.animation_to_play = [[Animation alloc] initWithPath:self.current_path];
+        //self.animation_to_play = [[Animation alloc] initWithPath:self.current_path];
+        self.animation_to_play = [[Animation alloc] initWithPath:self.animation_key andLevel:self.current_level];
     }
     
     
@@ -171,6 +173,9 @@
     // add the button action to the current path, looking for the Camino Misterioso
     NSString *path = thisButton.titleLabel.text;
     [self.current_path addObject:path];
+    // concatenate the button tag with the previous chain to build the animation key to select the right frames in plist
+    self.animation_key = [ NSString stringWithFormat:@"%@%@", self.animation_key, [@(thisButton.tag)  stringValue]];
+    NSLog(@"an: %@", self.animation_key);
     // trigger new animation
     self.Is_new_animation = YES;
 }
@@ -188,7 +193,7 @@
     stopImageView.tag = 999;
     // add stopImage to view
     [self addSubview:stopImageView];
-    //
+    // allow the level to finish if no active buttons left
     self.Can_finish_level = YES;
    
 }

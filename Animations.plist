@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Level 1</key>
+	<dict>
+		<key>0</key>
+		<array>
+			<string>win_1.png</string>
+			<string>win_2.png</string>
+			<string>win_3.png</string>
+			<string>win_4.png</string>
+			<string>win_5.png</string>
+			<string>win_6.png</string>
+			<string>win_7.png</string>
+			<string>win_8.png</string>
+			<string>win_9.png</string>
+			<string>win_10.png</string>
+			<string>win_11.png</string>
+			<string>win_12.png</string>
+			<string>win_13.png</string>
+			<string>win_14.png</string>
+			<string>win_15.png</string>
+			<string>win_16.png</string>
+		</array>
+		<key>010203040</key>
+		<array/>
+	</dict>
+	<key>Level 2</key>
+	<string></string>
+</dict>
+</plist>
