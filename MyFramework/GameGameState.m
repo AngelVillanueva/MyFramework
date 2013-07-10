@@ -150,7 +150,7 @@
         // start animation
         [self.animation_to_play.movie startAnimating];
         // callback to show a fix image at the end
-        [NSTimer scheduledTimerWithTimeInterval:0.5 target:self
+        [NSTimer scheduledTimerWithTimeInterval:self.animation_to_play.movie.animationDuration target:self
                                        selector:@selector(animationDone:)
                                        userInfo:nil repeats:NO];
     }
