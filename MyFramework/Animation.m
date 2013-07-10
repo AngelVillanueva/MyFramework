@@ -26,6 +26,7 @@
         self.movie = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, w, h)];
         // assign images and duration
         self.movie.animationImages = [self findMovieFromPath:animacion_key andLevel:level];
+        self.stopImage = [self.movie.animationImages objectAtIndex:0];
         self.movie.animationDuration = self.movie.animationImages.count / 30;
         self.movie.animationRepeatCount = 1;
     }

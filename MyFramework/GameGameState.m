@@ -178,9 +178,8 @@
     [inTimer invalidate];
     inTimer = nil;
     // recover stopImage for a given animation
-    UIImage *stopImage = [UIImage imageNamed:@"win_1.png"];
-    UIImageView *stopImageView = [ [UIImageView alloc] initWithImage:stopImage];
-    stopImageView.frame = CGRectMake(120, 125, 86, 193);
+    UIImageView *stopImageView = [ [UIImageView alloc] initWithImage:self.animation_to_play.stopImage];
+    stopImageView.frame = self.animation_to_play.movie.frame;
     // set tag to stopImage to pave the road for its future removal
     stopImageView.tag = 999;
     // add stopImage to view

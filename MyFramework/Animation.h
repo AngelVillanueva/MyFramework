@@ -11,6 +11,7 @@
 @interface Animation : NSObject
 
 @property UIImageView *movie;
+@property UIImage *stopImage;
 
 - (Animation *)initWithPath:(NSString *)animation_key andLevel:(NSInteger)level;
 - (NSMutableArray *)findMovieFromPath:(NSString *)animation_key andLevel:(NSInteger)level;
