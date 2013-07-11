@@ -34,13 +34,17 @@
 }
 
 - (NSMutableArray *)findMovieFromPath:(NSString *)animation_key andLevel:(NSInteger)level {
+    // select the right Level and animation path from Animaciones plist
     NSDictionary *mainDictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Animaciones" ofType:@"plist"]];
     NSString *levelKey = [NSString stringWithFormat:@"Level %d", level];
     NSDictionary *animacionDictionary = [mainDictionary objectForKey:levelKey];
-    
     // Load images
     NSArray *imageNames = [animacionDictionary objectForKey:animation_key];
-    
+    // if there is no specific animation for that path then read the images for the default animation
+    if (!imageNames || !imageNames.count) {
+        imageNames = [animacionDictionary objectForKey:@"default"];
+    }
+    // build the images array for the animation
     NSMutableArray *images = [[NSMutableArray alloc] init];
     for (int i = 0; i < imageNames.count; i++) {
         [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
